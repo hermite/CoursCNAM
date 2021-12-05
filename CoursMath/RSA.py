@@ -7,7 +7,7 @@ def cryptChar(char, tabCodage, n,c):
     for ligne in tabCodage:
         if ligne[0] == char:
             return (int(ligne[1]) ** c) % n
-    return "?"
+    return "#"
 
 
 # Envoi la lettre correspondant au code en fonction de la table de codage fournie et appliquant le décryptage RSA
@@ -20,7 +20,7 @@ def decryptChar(code, tabCodage,n,d):
     for ligne in tabCodage:
         if ligne[1] == codeDecrypt:
             return ligne[0]
-    return "?"
+    return "#"
 
 #Crypte un message en utilisant la méthode de chiffrement RSA, une table de codage et la clé publique
 def cryptChaine(chaine,tab, n, c):
@@ -52,7 +52,6 @@ tabCODAGE = [["A", 1], ["B", 2], ["C", 3], ["D", 4], ["E", 5], ["F", 6], ["G", 7
 p=5
 q=11
 n=p*q
-m=(p-1)*(q-1)
 c=9
 d=9
 print("----------------------------------")
